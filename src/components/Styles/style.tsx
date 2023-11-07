@@ -52,3 +52,50 @@ export const Container = styled.div`
   height: 100vh;
 `;
 // #endregion
+
+// #region Home
+export const DivIconHome = styled.div`
+  background-color: ${(props) => props.theme.colorBackIcon};
+  width: 14%;
+  height: 15%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  transform: translate(304%, -46%);
+  box-shadow: 11px 16px 29px 3px rgba(0, 0, 0, 0.20);
+`;
+
+export const Selector = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 77%;
+  height: 36%;
+  border-radius: 50px;
+  transform: translate(15%, 89%);
+  box-shadow: 23px 21px 38px 2px rgba(0, 0, 0, 0.25);
+  background-color: ${(props) => props.theme.colorBackMain};
+`;
+
+export const ButtonHome = styled.button`
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 11px 16px 27px 3px rgba(0, 0, 0, 0.20);
+  background: ${(props) => props.theme.colorBackButton};
+  color:  ${(props) => props.theme.colorText};
+
+  &:hover {
+    box-shadow: 0 0 20px 0px #2e2e2e3a;
+  }
+
+  &:focus {
+    outline: none;
+  }
+`;
+// #endregion
