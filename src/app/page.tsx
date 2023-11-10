@@ -6,28 +6,29 @@ import Link from "next/link";
 import { Mukta } from 'next/font/google'
 
 
-export default function Page() {
-  const IconPorto = styled.img`
-    transform: scale(0.7);
-  `;
-  
-  const ButtonDiv = styled.div`
-    display: inline-flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    transform: translateY(-8px);
-    height: 100%;
-  `;
-  
-  const ImgDiv = styled.div`
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-    width: 20%;
-    justify-content: center;
-  `;
+const IconPorto = styled.img`
+  transform: scale(0.7);
+`;
 
+const ButtonDiv = styled.div`
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transform: translateY(-8px);
+  height: 100%;
+`;
+
+const ImgDiv = styled.div`
+  display: flex;
+  align-items: center;
+  transform: scale(0.6);
+  width: 72px;
+  height: 64px;
+  justify-content: center;
+`;
+
+export default function Page() {
   return (
     <Selector>
       <DivIconHome>

@@ -67,10 +67,7 @@ input:checked + .slider:before {
     align-items: center;
     justify-content: center;
     text-decoration-line: none;
-}
-
-.AcompanyStyle{
-    transform: translateY(-90px);
+    transform: scale(0.73);
 }
 
 .IconAcompanyStyle{
@@ -89,7 +86,7 @@ input:checked + .slider:before {
 }
 
 .btn .text {
-    font-size: 2.7rem;
+    font-size: 2rem;
     font-family: 'Mukta', sans-serif;
     font-weight: 700;
 }

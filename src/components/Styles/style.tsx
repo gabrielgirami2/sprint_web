@@ -56,13 +56,13 @@ export const Container = styled.div`
 // #region Home
 export const DivIconHome = styled.div`
   background-color: ${(props) => props.theme.colorBackIcon};
-  width: 14%;
-  height: 15%;
+  width: 20%;
+  height: 20%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 13px;
-  transform: translate(304%, -46%);
+  transform: translate(208%, -46%);
   box-shadow: 11px 16px 29px 3px rgba(0, 0, 0, 0.20);
 `;
 
