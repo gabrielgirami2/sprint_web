@@ -101,91 +101,82 @@ export const ButtonHome = styled.button`
 // #endregion
 
 // #region Resquest
-const Message = styled.div` 
-  padding: 10px 15px;
-  margin: 5px;
-  max-width: 70%;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  word-wrap: break-word;
-  font-size: 0.8rem;
-`;
-
-export const ChatHeader = styled.div`
-  position: fixed;
-  top: 0;
+export const Input = styled.input`
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px ${(props) => props.theme.colorTexto} solid;
+  display: block;
   width: 100%;
-  height: 6vh;
-  background-color: #000;
-  border-radius: 0px 0px 8px 8px;
-`;
+  padding: 15px 0;
+  font-size: 18px;
+  color: ${(props) => props.theme.colorBackTextChat};
 
-export const ChatMessage = styled(Message)`
-  background-color: ${(props) => props.theme.colorBackDialogChat};
-  color: ${(props) => props.theme.colorBackDialogChatText};
-  align-self: flex-start;
-  margin-left: 18px;
-  border-radius: 20px 20px 20px 0px;
-`;
+  &:focus, &:valid{
+    outline: 0;
+    border-bottom-color: ${(props) => props.theme.colorTexto};
+  }
 
-export const UserMessage = styled(Message)`
-  background-color: ${(props) => props.theme.colorBackDialogUser};
-  color: ${(props) => props.theme.colorBackDialogText};
-  align-self: flex-end;
-  margin-right: 18px;
-  border-radius: 20px 20px 0px 20px;
-`;
-
-export const ChatSend = styled.div`
-  position: relative;
-  padding: 2px;
-  bottom: 12px;
-  background-color: ${(props) => props.theme.colorBackTextChat};;;
-  width: 96%;
-  max-height: 380px;
-  margin-top: 25px;
-  border-radius: 45px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0px 0px 24px 6px rgba(0, 0, 0, 0.2);
-`;
-
-export const Textarea = styled.textarea`
-  width: 89%;
-  max-height: 375px;
-  border: none;
-  font-size: 1rem;
-  margin-left: 25px;
-  border-radius: 10px;
-  background: none;
-  outline: none !important;
-  resize: none;
-  color: ${(props) => props.theme.colorBackDialogText};
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  letter-spacing: 2px; 
-  overflow-wrap: break-word;
-
-  &::placeholder {
-    color: #828E9E;
-    font-weight: 300;
-    letter-spacing: 10px;
-    line-height: 200%;
+  &:focus+label span,
+  &:valid+label span {
+    color: ${(props) => props.theme.colorTexto};
+    transform: translateY(-30px);
   }
 `;
 
-export const Button = styled.button`
-  text-decoration: none;
-  border: none;
-  background-color: transparent;
-  font-size: 30px;
-  color: ${(props) => props.theme.colorBackButtonChat};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 12px;
+export const Span = styled.span`
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: ${(props) => props.theme.colorTexto};
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 `;
 
+export const Label = styled.label`
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+`;
+
+export const ButtonValid = styled.button`
+  width: 45%; 
+  height: 24%;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 11px 16px 27px 3px rgba(0, 0, 0, 0.20);
+  background: ${(props) => props.theme.colorBackButton};
+  color:  ${(props) => props.theme.colorText};
+
+  &:hover {
+    box-shadow: 0 0 20px 0px #2e2e2e3a;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .Vtext {
+    transition: all 0.5s;
+    opacity: 0;
+  }
+
+  &:active, 
+  &:hover,
+  &:hover .iconA, 
+  &:active .iconA {
+    transition: transform 0.3s ease;
+  }
+
+  &:active {
+    transform: scale(1.1) ;
+  }
+
+  &:hover .iconA, &:active .iconA {
+    transform: scale(1.2) translateX(-100%);
+  }
+`;
 // #endregion

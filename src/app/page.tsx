@@ -3,7 +3,7 @@
 
 import { Selector, DivIconHome, ButtonHome } from "../components/Styles/style";
 import styled from "styled-components";
-import './page.module.css'
+import './globals.css'
 import Link from "next/link";
 import Image from "next/image";
 
@@ -38,11 +38,11 @@ export default function Page() {
       </DivIconHome>
 
       <ButtonDiv>
-        <Link href="/request" className='linkButtonStyle'>
+        <Link href="/valid" className='linkButtonStyle'>
           <ButtonHome className="btn">
             <span className="text">Solicitar</span>
             <ImgDiv>
-              <Image width={68} height={58} src="img/Tow.svg" className="icon IconRequest" alt="icon" />
+              <Image width={58} height={48} src="img/Tow.svg" className="icon IconRequest" alt="icon" />
             </ImgDiv>
           </ButtonHome>
         </Link>
