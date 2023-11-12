@@ -50,6 +50,8 @@ export const Container = styled.div`
   color: ${(props) => props.theme.colorTexto};
   width: 100vw;
   height: 100vh;
+
+  
 `;
 // #endregion
 
