@@ -133,6 +133,12 @@ input:checked + .slider:before {
   
 /* #endregion */
 
-/* #region Request label */
+/* #region Request */
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #5264AE;
+}
 
 /* #endregion */

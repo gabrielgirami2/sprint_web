@@ -16,7 +16,7 @@ const DivForm = styled.div`
     justify-content: center;
 `;
 
-const Form = styled.div`
+const Vform = styled.div`
     position: relative;
     width: 190px;
 `;
@@ -76,7 +76,7 @@ export default function Page() {
             </DivIconHome>
 
             <DivForm>
-                <Form className="form-control">
+                <Vform className="form-control">
                     <Input type="text" value={cpf} onChange={handleCpfChange} required={true}/>
                     <Label>
                         <Span style={{ transitionDelay: '0ms' }}>D</Span>
@@ -95,7 +95,7 @@ export default function Page() {
                         <Span style={{ transitionDelay: '650ms' }}>f</Span>
                         <Span style={{ transitionDelay: '705ms', marginLeft: '3px' }}>!</Span>
                     </Label>
-                </Form>
+                </Vform>
             </DivForm>
 
             <DivButton>

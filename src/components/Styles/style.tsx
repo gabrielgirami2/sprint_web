@@ -100,7 +100,7 @@ export const ButtonHome = styled.button`
 `;
 // #endregion
 
-// #region Resquest
+// #region Valid
 export const Input = styled.input`
   background-color: transparent;
   border: 0;
@@ -179,4 +179,135 @@ export const ButtonValid = styled.button`
     transform: scale(1.2) translateX(-100%);
   }
 `;
+// #endregion
+
+// #region Resquest
+export const Rselector = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 77%;
+  height: 88%;
+  border-radius: 50px;
+  transform: translate(15%, 8%);
+  box-shadow: 23px 21px 38px 2px rgba(0, 0, 0, 0.25);
+  background-color: ${(props) => props.theme.colorBackMain};
+`;
+
+export const Form = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const FormGroup = styled.div`
+  position: relative;
+`;
+
+export const FormField = styled.input`
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const FormSpanBar = styled.span`
+  position: relative;
+  display: block;
+  width: 200px;
+
+  &:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    left: 50%;
+  }
+
+  &:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    right: 50%;
+  }
+`;
+
+export const FormLabel = styled.label`
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+`;
+
+export const FormSpanChar = styled.span`
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * .05s);
+`;
+
+
+
+
+export const ButtonRequest = styled.button`
+  width: 45%; 
+  height: 24%;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 11px 16px 27px 3px rgba(0, 0, 0, 0.20);
+  background: ${(props) => props.theme.colorBackButton};
+  color:  ${(props) => props.theme.colorText};
+
+  &:hover {
+    box-shadow: 0 0 20px 0px #2e2e2e3a;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .Vtext {
+    transition: all 0.5s;
+    opacity: 0;
+  }
+
+  &:active, 
+  &:hover,
+  &:hover .iconA, 
+  &:active .iconA {
+    transition: transform 0.3s ease;
+  }
+
+  &:active {
+    transform: scale(1.1) ;
+  }
+
+  &:hover .iconA, &:active .iconA {
+    transform: scale(1.2) translateX(-100%);
+  }
+`;
+
 // #endregion
