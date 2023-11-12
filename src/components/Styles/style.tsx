@@ -66,6 +66,8 @@ export const DivIconHome = styled.div`
   border-radius: 13px;
   transform: translate(208%, -46%);
   box-shadow: 11px 16px 29px 3px rgba(0, 0, 0, 0.20);
+
+
 `;
 
 export const Selector = styled.div`
@@ -195,14 +197,9 @@ export const Rselector = styled.div`
   background-color: ${(props) => props.theme.colorBackMain};
 `;
 
-export const Form = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
 export const FormGroup = styled.div`
   position: relative;
+  margin-top: 20px;
 `;
 
 export const FormField = styled.input`
@@ -266,9 +263,6 @@ export const FormSpanChar = styled.span`
   transition: 0.2s ease all;
   transition-delay: calc(var(--index) * .05s);
 `;
-
-
-
 
 export const ButtonRequest = styled.button`
   width: 45%; 
