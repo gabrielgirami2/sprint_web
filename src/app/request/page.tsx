@@ -13,7 +13,7 @@ const InputField = styled.input`
 `;
 
 export default function page() {
-    const [fullName, setFullName] = useState('');
+    const [name, setName] = useState('');
     const [cpf, setCpf] = useState('');
     const [cnh, setCnh] = useState('');
     const [email, setEmail] = useState('');
@@ -33,7 +33,7 @@ export default function page() {
 
             <Form onSubmit={handleSubmit}>
                 <FormGroup className="wave-group">
-                    <FormField required type="text" className="input"/>
+                    <FormField required type="text" className="input" value={name} onChange={(e) => setName(e.target.value)}/>
                     <FormSpanBar className="bar"></FormSpanBar>
                     <FormLabel className="label">
                         <FormSpanChar className="label-char" style={{ '--index': 0 }}>N</FormSpanChar>
@@ -42,13 +42,49 @@ export default function page() {
                         <FormSpanChar className="label-char" style={{ '--index': 3 }}>e</FormSpanChar>
                     </FormLabel>
                 </FormGroup>
-
-                <br/>
-                <br/>
-                <InputField type="text" placeholder="Nome Completo" value={fullName} onChange={(e) => setFullName(e.target.value)}/>
-                <InputField type="text" placeholder="CPF" value={cpf} onChange={(e) => setCpf(e.target.value)}/>
-                <InputField type="text" placeholder="CNH" value={cnh} onChange={(e) => setCnh(e.target.value)}/>
+                <FormGroup className="wave-group">
+                    <FormField required type="text" className="input" value={cpf} onChange={(e) => setCpf(e.target.value)}/>
+                    <FormSpanBar className="bar"></FormSpanBar>
+                    <FormLabel className="label">
+                        <FormSpanChar className="label-char" style={{ '--index': 0 }}>C</FormSpanChar>
+                        <FormSpanChar className="label-char" style={{ '--index': 1 }}>P</FormSpanChar>
+                        <FormSpanChar className="label-char" style={{ '--index': 2 }}>F</FormSpanChar>
+                    </FormLabel>
+                </FormGroup>
+                <FormGroup className="wave-group">
+                    <FormField required type="text" className="input" value={cnh} onChange={(e) => setCnh(e.target.value)}/>
+                    <FormSpanBar className="bar"></FormSpanBar>
+                    <FormLabel className="label">
+                        <FormSpanChar className="label-char" style={{ '--index': 0 }}>C</FormSpanChar>
+                        <FormSpanChar className="label-char" style={{ '--index': 1 }}>N</FormSpanChar>
+                        <FormSpanChar className="label-char" style={{ '--index': 2 }}>H</FormSpanChar>
+                    </FormLabel>
+                </FormGroup>
                 <InputField type="email" placeholder="Email Pessoal" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <FormGroup className="wave-group">
+                    <FormField required type="text" className="input" value={cnh} onChange={(e) => setCnh(e.target.value)}/>
+                    <FormSpanBar className="bar"></FormSpanBar>
+                    <FormLabel className="label">
+                        <FormSpanChar className="label-char" style={{ '--index': 0 }}>C</FormSpanChar>
+                        <FormSpanChar className="label-char" style={{ '--index': 1 }}>N</FormSpanChar>
+                        <FormSpanChar className="label-char" style={{ '--index': 2 }}>H</FormSpanChar>
+                    </FormLabel>
+                </FormGroup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <InputField type="email" placeholder="Confirme seu Email" value={confirmEmail} onChange={(e) => setConfirmEmail(e.target.value)}/>
                 <InputField type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <InputField type="password" placeholder="Confirme sua Senha" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
