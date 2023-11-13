@@ -21,7 +21,7 @@ const Vform = styled.div`
   width: 190px;
 
   @media (max-width: 360px) {
-    width: 190px; /* Largura máxima para telas maiores que 360px */
+    width: 190px;
   }
 
   @media (max-width: 600px) {
