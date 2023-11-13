@@ -113,9 +113,9 @@ export default function Page() {
             <Span style={{ transitionDelay: '400ms' }}>e</Span>
             <Span style={{ transitionDelay: '450ms' }}>u</Span>
             <Span style={{ transitionDelay: '500ms' }}></Span>
-            <Span style={{ transitionDelay: '550ms' }}>C</Span>
+            <Span style={{ transitionDelay: '550ms' }}>c</Span>
             <Span style={{ transitionDelay: '600ms' }}>P</Span>
-            <Span style={{ transitionDelay: '650ms' }}>f</Span>
+            <Span style={{ transitionDelay: '650ms' }}>F</Span>
             <Span style={{ transitionDelay: '705ms', marginLeft: '3px' }}>!</Span>
           </Label>
         </Vform>
