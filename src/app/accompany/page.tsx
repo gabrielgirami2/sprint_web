@@ -78,20 +78,20 @@ export default function Page() {
         <Vform className="form-control">
           <Input type="text" value={cpf} onChange={handleCpfChange} required={true}/>
           <Label>
-            <Span style={{ transitionDelay: '0ms' }}></Span>
-            <Span style={{ transitionDelay: '50ms' }}></Span>
-            <Span style={{ transitionDelay: '100ms' }}></Span>
-            <Span style={{ transitionDelay: '150ms' }}></Span>
-            <Span style={{ transitionDelay: '200ms' }}></Span>
-            <Span style={{ transitionDelay: '250ms' }}></Span>
+            <Span style={{ transitionDelay: '0ms' }}>D</Span>
+            <Span style={{ transitionDelay: '50ms' }}>i</Span>
+            <Span style={{ transitionDelay: '100ms' }}>g</Span>
+            <Span style={{ transitionDelay: '150ms' }}>i</Span>
+            <Span style={{ transitionDelay: '200ms' }}>t</Span>
+            <Span style={{ transitionDelay: '250ms' }}>e</Span>
             <Span style={{ transitionDelay: '300ms' }}></Span>
-            <Span style={{ transitionDelay: '350ms' }}></Span>
-            <Span style={{ transitionDelay: '400ms' }}></Span>
-            <Span style={{ transitionDelay: '450ms' }}></Span>
+            <Span style={{ transitionDelay: '350ms' }}>s</Span>
+            <Span style={{ transitionDelay: '400ms' }}>e</Span>
+            <Span style={{ transitionDelay: '450ms' }}>u</Span>
             <Span style={{ transitionDelay: '500ms' }}></Span>
-            <Span style={{ transitionDelay: '550ms' }}></Span>
-            <Span style={{ transitionDelay: '600ms' }}></Span>
-            <Span style={{ transitionDelay: '650ms' }}></Span>
+            <Span style={{ transitionDelay: '550ms' }}>C</Span>
+            <Span style={{ transitionDelay: '600ms' }}>P</Span>
+            <Span style={{ transitionDelay: '650ms' }}>f</Span>
             <Span style={{ transitionDelay: '705ms', marginLeft: '3px' }}>!</Span>
           </Label>
         </Vform>
