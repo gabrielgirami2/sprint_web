@@ -53,7 +53,7 @@ export default function Page() {
                     console.log(response.data);
                     router.push('/protocol');
                 } else {
-                    router.push('/request');
+                    router.push('/client');
                 }
             } catch (error) {
                 console.error('Erro ao chamar a API:', error);

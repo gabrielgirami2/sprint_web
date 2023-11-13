@@ -1,9 +1,9 @@
 'use client'
 import axios from "axios";
-import { useRouter } from 'next/router';
 import { useState } from "react";
 import styled from "styled-components";
 import { ButtonRequest, DivIconHome, FormField, FormGroup, FormLabel, FormSpanBar, FormSpanChar, Rselector } from "@/components/Styles/style";
+import Link from "next/link";
 
 const IconPorto = styled.img`
     transform: scale(0.7);
@@ -17,7 +17,6 @@ const Form = styled.div`
 `;
 
 export default function page() {
-    const router = useRouter();
     const [name, setName] = useState('');
     const [cpf, setCpf] = useState('');
     const [cnh, setCnh] = useState('');
@@ -80,7 +79,6 @@ export default function page() {
             setConfirmEmail('');
             setPassword('');
             setConfirmPassword('');
-            router.push('/vehicle');
         } catch (error) {
             console.error('Error submitting form:', error);
         }
@@ -190,7 +188,9 @@ export default function page() {
                     </FormLabel>
                 </FormGroup>
                 <br/>
-                <ButtonRequest onClick={handleSubmit} type="submit" style={{ transform: 'translateY(36px)' }}><p>Continuar</p></ButtonRequest>
+                <Link href="/vehicle" style={{display: "contents"}}>
+                    <ButtonRequest onClick={handleSubmit} type="submit" style={{ transform: 'translateY(36px)' }}><p>Continuar</p></ButtonRequest>
+                </Link>
             </Form>
         </Rselector>
     );

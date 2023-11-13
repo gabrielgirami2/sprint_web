@@ -1,9 +1,9 @@
 'use client'  
 import { useState } from "react";
-import { useRouter } from 'next/router';
 import { ButtonRequest, DivIconHome, FormField, FormGroup, FormLabel, FormSpanBar, FormSpanChar, Rselector } from "@/components/Styles/style";
 import styled from "styled-components";
 import axios from "axios";
+import Link from "next/link";
 
 const IconPorto = styled.img`
   transform: scale(0.7);
@@ -18,7 +18,6 @@ const Form = styled.div`
 
 
 export default function page() {
-  const router = useRouter();
   const [plate, setPlate] = useState('');
   const [size, setSize] = useState('');
   const [weight, setWeight] = useState('');
@@ -56,8 +55,6 @@ export default function page() {
       setBlindage('');
       setModel('');
       setCharge('');
-
-      router.push('/protocol');
     } catch (error) {
       console.error('Error submitting form:', error);
     };
@@ -186,7 +183,9 @@ export default function page() {
           </FormLabel>
         </FormGroup>
         <br/>
-        <ButtonRequest onClick={handleSubmit} type="submit" style={{ transform: 'translateY(15px)' }}><p>Continuar</p></ButtonRequest>
+        <Link href="/protocol" style={{display: "contents"}}>
+          <ButtonRequest onClick={handleSubmit} type="submit" style={{ transform: 'translateY(15px)' }}><p>Continuar</p></ButtonRequest>
+        </Link>
       </Form>
     </Rselector>
   );
