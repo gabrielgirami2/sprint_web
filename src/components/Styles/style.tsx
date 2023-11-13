@@ -68,6 +68,25 @@ export const DivIconHome = styled.div`
   box-shadow: 11px 16px 29px 3px rgba(0, 0, 0, 0.20);
 
 
+@media screen and (max-width: 360px) {
+  width: 100%; 
+  }
+
+@media screen and (max-width: 720px) {
+  width: 75%; 
+  }
+
+@media screen and (max-width: 1024px) {
+  width: 50%;
+  }
+
+@media screen and (max-width: 1280px) {
+  width: 35%;
+  }
+
+@media screen and (max-width: 1880px) {
+  width: 20%;
+  }
 `;
 
 export const Selector = styled.div`
@@ -200,6 +219,30 @@ export const Rselector = styled.div`
 export const FormGroup = styled.div`
   position: relative;
   margin-top: 20px;
+
+  @media screen and (max-width: 360px) {
+    min-width: 0;
+  }
+
+  @media screen and (max-width: 720px) {
+    max-width: 600px;
+  }
+
+  @media (min-width: 721px) and (max-width: 1024px) {
+    max-width: 800px;
+  }
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    max-width: 1000px;
+  }
+
+  @media (min-width: 1281px) and (max-width: 1880px) {
+    max-width: 1200px;
+  }
+
+  @media (min-width: 1881px) {
+    max-width: 1400px;
+  }
 `;
 
 export const FormField = styled.input`

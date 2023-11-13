@@ -1,5 +1,6 @@
 'use client'
 import axios from "axios";
+import { useRouter } from 'next/router';
 import { useState } from "react";
 import styled from "styled-components";
 import { ButtonRequest, DivIconHome, FormField, FormGroup, FormLabel, FormSpanBar, FormSpanChar, Rselector } from "@/components/Styles/style";
@@ -24,7 +25,8 @@ export default function page() {
     const [isEmailValid, setIsEmailValid] = useState(true);
     const [doEmailsMatch, setDoEmailsMatch] = useState(true);
     const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState(''); 
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [id, setId] = useState<string | null>(null);
 
     const handleCpfChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newCpf = event.target.value.replace(/\D/g, '');
@@ -62,16 +64,11 @@ export default function page() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
     
-        const userData = {
-          name,
-          cpf,
-          cnh,
-          email,
-          password,
-        };
+        const userData = { name, cpf, cnh, email, password };
     
         try {
             const response = await axios.post('http://localhost:8080/client', userData);
+            setId(response.data.id);
 
             console.log('Server response:', response.data);
 
@@ -82,10 +79,11 @@ export default function page() {
             setConfirmEmail('');
             setPassword('');
             setConfirmPassword('');
+            Router.push('/vehicle');
         } catch (error) {
             console.error('Error submitting form:', error);
         }
-      };
+    };
 
     return (
         <Rselector>

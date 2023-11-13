@@ -20,53 +20,17 @@ const ButtonDiv = styled.div`
   transform: translateY(-8px);
   height: 100%;
 
- @media (min-width: 600px) {
-    width: 150px;
-    height: 100%;
-  }
+  @media (max-width: 360px) {
+    width: 100%;
+    display: flex;
+    }
 
-  @media (min-width: 600px) {
-    width: 480px;
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  @media (min-width: 768px) {
-    width: 600px;
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  @media (min-width: 820px) {
-    width: 650px;
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  @media (min-width: 912px) {
-    width: 700px;
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  @media (min-width: 1024px) {
-    width: 800px;
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  @media (min-width: 1280px) {
-    width: 1000px;
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
+  @media (max-width: 1880px) {
+    width: 100%;
+    display: flex;
   }
 `;
+  
 
 const ImgDiv = styled.div`
   display: flex;

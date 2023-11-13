@@ -64,12 +64,69 @@ input:checked + .slider:before {
 /* #endregion */
 
 /* #region ButtonHome */
+@media screen and (max-width: 360px) {
+  .linkButtonStyle{
+    width: 160%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .linkButtonStyle{
+    width: 140%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .linkButtonStyle{
+    width: 140%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .linkButtonStyle{
+    width: 110%;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .linkButtonStyle{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+    .linkButtonStyle{
+      width: 90%;
+    }
+}
+
+@media screen and (max-width: 1560px) {
+  .linkButtonStyle{
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1760px) {
+  .linkButtonStyle{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1880px) {
+  .linkButtonStyle{
+    width: 75%;
+  }
+}
+
+
+
 .linkButtonStyle{
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration-line: none;
   transform: scale(0.73);
+
 }
 
 .IconAcompanyStyle{
