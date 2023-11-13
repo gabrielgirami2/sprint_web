@@ -17,6 +17,7 @@ const Form = styled.div`
 `;
 
 export default function page() {
+    const router = useRouter();
     const [name, setName] = useState('');
     const [cpf, setCpf] = useState('');
     const [cnh, setCnh] = useState('');
@@ -79,7 +80,7 @@ export default function page() {
             setConfirmEmail('');
             setPassword('');
             setConfirmPassword('');
-            Router.push('/vehicle');
+            router.push('/vehicle');
         } catch (error) {
             console.error('Error submitting form:', error);
         }

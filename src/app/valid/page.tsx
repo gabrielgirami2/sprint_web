@@ -2,7 +2,7 @@
 import axios from "axios";
 import styled from 'styled-components';
 import Image from "next/image";
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ButtonValid, DivIconHome, Input, Label, Selector, Span } from '@/components/Styles/style';
 import { useRouter } from "next/navigation";
 

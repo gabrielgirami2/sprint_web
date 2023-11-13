@@ -1,7 +1,109 @@
-import React from 'react'
+'use client'
+import axios from "axios";
+import styled from 'styled-components';
+import Image from "next/image";
+import React, { useState } from 'react';
+import { ButtonValid, DivIconHome, Input, Label, Selector, Span } from '@/components/Styles/style';
+import { useRouter } from "next/navigation";
 
-export default function page() {
+const IconPorto = styled.img`
+  transform: scale(0.7);
+`;
+
+const DivForm = styled.div`   
+  transform: translateY(37px);
+  display: flex;
+  justify-content: center;
+`;
+
+const Vform = styled.div`
+  position: relative;
+  width: 190px;
+`;
+
+const DivButton = styled.div`    
+  display: inline-flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+`;
+
+export default function Page() {
+  const router = useRouter();
+  const [cpf, setCpf] = useState('');
+  const [id, setId] = useState<number | null>(null);
+  const [isButtonActive, setIsButtonActive] = useState(false);
+
+  const handleCpfChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const newCpf = event.target.value.replace(/\D/g, '');
+
+      if (newCpf.length <= 11) {
+          setCpf(newCpf);
+          setIsButtonActive(newCpf.length === 11);
+      } 
+  };
+
+  const handleFormSubmit = async () => {
+    if (cpf.length === 11) {
+      try {
+        const response = await axios.get(`http://localhost:8080/client?cpf=${cpf}`);
+        if (response.data && Object.keys(response.data).length > 0) {
+          const clientIdFromApi = response.data.id;
+          setId(clientIdFromApi);
+          console.log(response.data);
+          router.push('/protocol');
+        } else {
+          router.push('/request');
+        }
+      } catch (error) {
+        console.error('Erro ao chamar a API:', error);
+      }
+    } else {
+      alert('Por favor, insira um CPF válido com 11 dígitos.');
+    }
+  };
+
+  const handleSubmitButtonClick = async () => {
+    if (isButtonActive) {
+        handleFormSubmit();
+    }
+  };
+
   return (
-    <div>accompany</div>
-  )
+    <Selector>
+      <DivIconHome>
+        <IconPorto src="img/logo-portoseguro-blue.svg" alt="Logo" />
+      </DivIconHome>
+
+      <DivForm>
+        <Vform className="form-control">
+          <Input type="text" value={cpf} onChange={handleCpfChange} required={true}/>
+          <Label>
+            <Span style={{ transitionDelay: '0ms' }}>D</Span>
+            <Span style={{ transitionDelay: '50ms' }}>i</Span>
+            <Span style={{ transitionDelay: '100ms' }}>g</Span>
+            <Span style={{ transitionDelay: '150ms' }}>i</Span>
+            <Span style={{ transitionDelay: '200ms' }}>t</Span>
+            <Span style={{ transitionDelay: '250ms' }}>e</Span>
+            <Span style={{ transitionDelay: '300ms' }}></Span>
+            <Span style={{ transitionDelay: '350ms' }}>s</Span>
+            <Span style={{ transitionDelay: '400ms' }}>e</Span>
+            <Span style={{ transitionDelay: '450ms' }}>u</Span>
+            <Span style={{ transitionDelay: '500ms' }}></Span>
+            <Span style={{ transitionDelay: '550ms' }}>C</Span>
+            <Span style={{ transitionDelay: '600ms' }}>P</Span>
+            <Span style={{ transitionDelay: '650ms' }}>f</Span>
+            <Span style={{ transitionDelay: '705ms', marginLeft: '3px' }}>!</Span>
+          </Label>
+        </Vform>
+      </DivForm>
+
+      <DivButton>
+        <ButtonValid onClick={handleSubmitButtonClick} disabled={!isButtonActive} style={{ opacity: isButtonActive ? 1 : 0.4 }}>
+          <p className="Vtext">Seguinte</p> 
+          <Image width={25} height={25} src="img/bx-right-arrow-alt.svg" className="iconA" alt="icon" />
+        </ButtonValid>
+      </DivButton>
+    </Selector>
+  );
 }

@@ -16,7 +16,9 @@ const Form = styled.div`
   align-items: center;
 `;
 
+
 export default function page() {
+  const router = useRouter();
   const [plate, setPlate] = useState('');
   const [size, setSize] = useState('');
   const [weight, setWeight] = useState('');
@@ -38,7 +40,7 @@ export default function page() {
       blindage,
       model,
       charge,
-      client: id,
+      client
     };
 
     try {
@@ -54,6 +56,8 @@ export default function page() {
       setBlindage('');
       setModel('');
       setCharge('');
+
+      router.push('/protocol');
     } catch (error) {
       console.error('Error submitting form:', error);
     };
