@@ -19,6 +19,30 @@ const DivForm = styled.div`
 const Vform = styled.div`
   position: relative;
   width: 190px;
+
+  @media (max-width: 360px) {
+    width: 190px; /* Largura máxima para telas maiores que 360px */
+  }
+
+  @media (max-width: 600px) {
+    width: 290px;
+  }
+  
+  @media (max-width: 900px) {
+    width: 390px;
+  }
+
+  @media (max-width: 1200px) {
+    width: 490px;
+  }
+
+  @media (max-width: 1500px) {
+    width: 590px;
+  }
+
+  @media (max-width: 1880px) {
+    width: 690px;
+  }
 `;
 
 const DivButton = styled.div`    
