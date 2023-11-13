@@ -109,7 +109,7 @@ export default function Page() {
             <Span style={{ transitionDelay: '200ms' }}>t</Span>
             <Span style={{ transitionDelay: '250ms' }}>e</Span>
             <Span style={{ transitionDelay: '300ms' }}></Span>
-            <Span style={{ transitionDelay: '350ms' }}>S</Span>
+            <Span style={{ transitionDelay: '350ms' }}>s</Span>
             <Span style={{ transitionDelay: '400ms' }}>e</Span>
             <Span style={{ transitionDelay: '450ms' }}>u</Span>
             <Span style={{ transitionDelay: '500ms' }}></Span>
